@@ -1,0 +1,34 @@
+html{
+    cursor: url(imagens/mata_mosca.png) 30 30, auto;
+}
+
+body {
+    background-image: url(imagens/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.panel {
+    position: absolute;
+    width: 20%;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    bottom: 0px;
+    border: solid 1px #fff;
+    border-radius: 10px;
+    left:0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lives {
+    float: left;
+}
+
+.chronometer {
+    color:#fff;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}

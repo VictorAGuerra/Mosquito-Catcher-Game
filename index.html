@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Mata Mosquito
+        </title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+            function startGame() {
+                var level = document.getElementById('level').value
+                
+                if (!level) {
+                    alert('Select a level to start')
+                    return false
+                }
+                
+                window.location.href = 'game.html?' + level
+            }
+
+        </script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <img id="game_over" src="imagens/game.png" alt="Fim de Jogo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <div class="mb-2">
+                            <select class="form-control" id="level">
+                                <option value="">-- Select Level --</option>
+                                <option value="1">Facility</option>
+                                <option value="2">Household</option>
+                                <option value="3">Forest</option>
+                                <option value="4">Infestation</option>
+                                <option value="5">There's nothing left...</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-danger btn-lg" onclick="startGame()">Start Game</button>></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
